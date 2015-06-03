@@ -14,6 +14,7 @@
 #import "UIWindow+Gradient.h"
 #import "Currencies.h"
 #import "ViewUtils.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 
 @interface AppDelegate () <CubeControllerDataSource, CubeControllerDelegate, UIGestureRecognizerDelegate>
@@ -25,6 +26,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BuddyBuildSDK setup:self];
+    
     //set window tint (does nothing on iOS 6)
     self.window.tintColor = [UIColor colorWithRed:100.0f/255 green:200.0f/255 blue:100.0f/255 alpha:1];
 
@@ -116,6 +119,16 @@
             [[[UIAlertView alloc] initWithTitle:@"No Currencies Selected" message:@"Please select at least two currencies in order to use the converter." delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil] show];
         });
     }
+}
+
+- (BOOL)application:(UIApplication *)application
+            openURL:(NSURL *)url
+  sourceApplication:(NSString *)sourceApplication
+         annotation:(id)annotation {
+    if ([BuddyBuildSDK handleOpenURL:url]) {
+        return YES;
+    }
+    return NO;
 }
 
 @end
