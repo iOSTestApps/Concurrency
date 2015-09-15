@@ -61,6 +61,11 @@
 		01856E23177CAEA5001FBB6D /* ViewUtils.m in Sources */ = {isa = PBXBuildFile; fileRef = 01856E22177CAEA5001FBB6D /* ViewUtils.m */; };
 		01A657DB188FC8580060550D /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = 01A657DA188FC8580060550D /* Settings.m */; };
 		01E7EDB718292E750083F979 /* Currencies.plist in Resources */ = {isa = PBXBuildFile; fileRef = 01E7ECBB18292E740083F979 /* Currencies.plist */; };
+		1D4AEEB8CAE7B0D96E86EDDA /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 670A5F81921DF516D4135EDF /* CoreTelephony.framework */; };
+		53FF382FB0F26735F036A1A9 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 24A0EC3E9CE4A494121BF287 /* AssetsLibrary.framework */; };
+		6465957A90B56FC1168F3809 /* BuddyBuildSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF8192F458EA448E044D6D76 /* BuddyBuildSDK.framework */; };
+		749F64DF24CFB8BC3DACB45D /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB9E31FF6D07055E13382D1A /* SystemConfiguration.framework */; };
+		B345217DAC1BAC0AA6D3E354 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8524E8FC8D8FD8FAEF89E36 /* CoreText.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +150,11 @@
 		01A657D9188FC8580060550D /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
 		01A657DA188FC8580060550D /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
 		01E7ECBB18292E740083F979 /* Currencies.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Currencies.plist; sourceTree = "<group>"; };
+		24A0EC3E9CE4A494121BF287 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
+		670A5F81921DF516D4135EDF /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		A8524E8FC8D8FD8FAEF89E36 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		BB9E31FF6D07055E13382D1A /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		DF8192F458EA448E044D6D76 /* BuddyBuildSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = BuddyBuildSDK.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +165,11 @@
 				01412CE5177AD4D80070C4B2 /* CoreGraphics.framework in Frameworks */,
 				01412CE7177AD4D80070C4B2 /* UIKit.framework in Frameworks */,
 				01412CE3177AD4D80070C4B2 /* Foundation.framework in Frameworks */,
+				6465957A90B56FC1168F3809 /* BuddyBuildSDK.framework in Frameworks */,
+				53FF382FB0F26735F036A1A9 /* AssetsLibrary.framework in Frameworks */,
+				B345217DAC1BAC0AA6D3E354 /* CoreText.framework in Frameworks */,
+				1D4AEEB8CAE7B0D96E86EDDA /* CoreTelephony.framework in Frameworks */,
+				749F64DF24CFB8BC3DACB45D /* SystemConfiguration.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +243,11 @@
 				01412CE2177AD4D80070C4B2 /* Foundation.framework */,
 				01412CE4177AD4D80070C4B2 /* CoreGraphics.framework */,
 				01412CE6177AD4D80070C4B2 /* UIKit.framework */,
+				DF8192F458EA448E044D6D76 /* BuddyBuildSDK.framework */,
+				24A0EC3E9CE4A494121BF287 /* AssetsLibrary.framework */,
+				A8524E8FC8D8FD8FAEF89E36 /* CoreText.framework */,
+				670A5F81921DF516D4135EDF /* CoreTelephony.framework */,
+				BB9E31FF6D07055E13382D1A /* SystemConfiguration.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -610,6 +630,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Doe Pics Hit Inc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/Concurrency-Prefix.pch";
 				INFOPLIST_FILE = "Classes/Concurrency-Info.plist";
@@ -626,6 +650,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CODE_SIGN_IDENTITY = "iPhone Distribution: Doe Pics Hit Inc";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Doe Pics Hit Inc";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Classes/Concurrency-Prefix.pch";
 				INFOPLIST_FILE = "Classes/Concurrency-Info.plist";

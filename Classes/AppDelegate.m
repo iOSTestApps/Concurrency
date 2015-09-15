@@ -14,6 +14,7 @@
 #import "UIWindow+Gradient.h"
 #import "Currencies.h"
 #import "ViewUtils.h"
+#import <BuddyBuildSDK/BuddyBuildSDK.h>
 
 
 @interface AppDelegate () <CubeControllerDataSource, CubeControllerDelegate, UIGestureRecognizerDelegate>
@@ -25,6 +26,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [BuddyBuildSDK setup];
+    
     //set window tint (does nothing on iOS 6)
     self.window.tintColor = [UIColor colorWithRed:100.0f/255 green:200.0f/255 blue:100.0f/255 alpha:1];
 
